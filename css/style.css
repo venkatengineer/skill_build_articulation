@@ -1,0 +1,289 @@
+/* Paste Color Palette & CSS Variables */
+:root {
+  --bg-color: #fdfaf6;          /* Soft cream */
+  --surface-color: #ffffff;
+  --surface-hover: #fcf9f5;
+  
+  --pastel-mint: #b5dfd1;       /* Primary accent */
+  --pastel-mint-hover: #9ecdc0;
+  --pastel-pink: #f7cac9;       /* Secondary accent */
+  --pastel-lavender: #dec2cb;
+  --pastel-peach: #f9d8c3;
+  --pastel-blue: #a3c4f3;
+  
+  --text-primary: #5c5552;
+  --text-secondary: #8c8582;
+  --text-muted: #b8b1ae;
+  
+  --border-color: #f0ebe1;
+  --shadow-sm: 0 4px 15px rgba(220, 215, 205, 0.4);
+  --shadow-md: 0 8px 25px rgba(220, 215, 205, 0.5);
+  
+  --success: #a8e6cf;
+  --warning: #ffd3b6;
+  --error: #ffaaa5;
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+
+  --font-family: 'Nunito', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+#app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+#sidebar {
+  width: 250px;
+  background-color: var(--surface-color);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease;
+}
+
+#main-content {
+  flex: 1;
+  padding: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--pastel-mint);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--pastel-mint-hover);
+}
+
+/* Components */
+.card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 700;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--pastel-mint);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(181, 223, 209, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--pastel-mint-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(181, 223, 209, 0.6);
+}
+
+.btn-secondary {
+  background-color: var(--pastel-pink);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #f3b5b3;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--pastel-mint);
+  color: var(--pastel-mint);
+}
+
+.btn-outline:hover {
+  background-color: var(--pastel-mint);
+  color: #fff;
+}
+
+/* Forms */
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  transition: var(--transition);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--pastel-mint);
+  box-shadow: 0 0 0 3px rgba(181, 223, 209, 0.3);
+}
+
+/* Sidebar Nav */
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: var(--bg-color);
+  color: var(--pastel-mint);
+}
+
+.nav-link.active {
+  background-color: var(--pastel-mint);
+  color: #fff;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.badge-success { background-color: var(--success); color: #2c6e4f; }
+.badge-warning { background-color: var(--warning); color: #8a5a3a; }
+.badge-error { background-color: var(--error); color: #8a3a3a; }
+
+/* Utilities */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.grid { display: grid; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Practice UI Specifics */
+.record-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--pastel-pink);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(247, 202, 201, 0.5);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.record-btn:hover {
+  transform: scale(1.05);
+  background: #f3b5b3;
+}
+
+.record-btn.recording {
+  background: var(--error);
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 8px 20px rgba(255, 170, 165, 0.5);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 170, 165, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 170, 165, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 170, 165, 0); }
+}
+
+.waveform-canvas {
+  width: 100%;
+  height: 120px;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+}

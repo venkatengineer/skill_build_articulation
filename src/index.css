@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #FAF7F2;
+    --card-surface: #FFFFFF;
+    
+    /* Pastel Accents */
+    --pastel-lavender: #E8E5F8;
+    --pastel-lavender-dark: #382E67;
+    --pastel-lavender-border: #D1CBEF;
+    
+    --pastel-sage: #D4ECD5;
+    --pastel-sage-dark: #1E4722;
+    --pastel-sage-border: #B2D8B5;
+    
+    --pastel-pink: #FCE4EC;
+    --pastel-pink-dark: #6A1B38;
+    --pastel-pink-border: #F8BBD0;
+    
+    --pastel-blue: #E0F2FE;
+    --pastel-blue-dark: #0C4A6E;
+    --pastel-blue-border: #BAE6FD;
+    
+    --pastel-peach: #FFE8D6;
+    --pastel-peach-dark: #7C2D12;
+    
+    /* Dark high-contrast text */
+    --text-main: #2D2A26;
+    --text-muted: #65605B;
+    --border-subtle: #EFE9E0;
+  }
+}
+
+/* Custom Accessibility & Motion Rules */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus styles for keyboard accessibility */
+*:focus-visible {
+  outline: 3px solid #7C66DC !important;
+  outline-offset: 2px !important;
+  border-radius: 6px;
+}
+
+/* Pastel Card & Component Classes */
+.pastel-card {
+  background-color: var(--card-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(74, 63, 53, 0.04);
+}
+
+.pastel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  min-height: 48px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.pastel-btn-lavender {
+  background-color: var(--pastel-lavender);
+  color: var(--pastel-lavender-dark);
+  border: 1px solid var(--pastel-lavender-border);
+}
+.pastel-btn-lavender:hover {
+  background-color: #DDD8F3;
+  transform: translateY(-1px);
+}
+
+.pastel-btn-sage {
+  background-color: var(--pastel-sage);
+  color: var(--pastel-sage-dark);
+  border: 1px solid var(--pastel-sage-border);
+}
+.pastel-btn-sage:hover {
+  background-color: #C0E4C2;
+  transform: translateY(-1px);
+}
+
+.pastel-btn-pink {
+  background-color: var(--pastel-pink);
+  color: var(--pastel-pink-dark);
+  border: 1px solid var(--pastel-pink-border);
+}
+.pastel-btn-pink:hover {
+  background-color: #F8D0DF;
+  transform: translateY(-1px);
+}
+
+/* Keyframe Animations */
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(248, 187, 208, 0.6); }
+  50% { transform: scale(1.04); box-shadow: 0 0 0 16px rgba(248, 187, 208, 0); }
+}
+
+.animate-record-pulse {
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
