@@ -1,5 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { Mic } from 'lucide-react';
 
 export default function ProtectedRoute({ children }) {
   const { isAuthenticated, loading } = useAuth();
@@ -9,7 +10,7 @@ export default function ProtectedRoute({ children }) {
       <div className="min-h-screen bg-[#FAF7F2] flex items-center justify-center">
         <div className="text-center space-y-3">
           <div className="w-12 h-12 rounded-2xl bg-[#E8E5F8] border border-[#D1CBEF] flex items-center justify-center text-[#382E67] mx-auto animate-bounce">
-            🎤
+            <Mic className="w-6 h-6 text-[#382E67]" aria-hidden="true" />
           </div>
           <p className="text-xs font-bold text-[#65605B]">Loading session...</p>
         </div>

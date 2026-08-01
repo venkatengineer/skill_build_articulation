@@ -120,7 +120,7 @@ export default function History() {
 
                     {session.feedback && (
                       <div className="p-3.5 bg-white rounded-xl border border-[#D1CBEF] text-xs font-semibold text-[#382E67]">
-                        💡 Guidance: {session.feedback}
+                        Guidance: {session.feedback}
                       </div>
                     )}
                   </div>

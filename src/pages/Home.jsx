@@ -17,7 +17,7 @@ export default function Home() {
             Speech Articulation Assistant
           </span>
           <h1 className="text-2xl md:text-3xl font-extrabold font-['Lexend',sans-serif] text-[#2D2A26]">
-            Welcome back, {firstName}! 👋
+            Welcome back, {firstName}!
           </h1>
           <p className="text-sm md:text-base text-[#65605B] leading-relaxed">
             Ready to train your voice? Practice tongue twisters, record your speech, and get real-time acoustic feedback.
@@ -64,7 +64,7 @@ export default function Home() {
           <span className="text-xs font-bold text-[#65605B] block">Current Streak</span>
           <div className="text-2xl font-extrabold text-[#7C2D12]">6 Days</div>
           <span className="text-[11px] font-semibold text-[#7C2D12] bg-[#FFE8D6] px-2 py-0.5 rounded-full inline-block">
-            Keep it up! 🔥
+            Keep it up!
           </span>
         </div>
 

@@ -133,7 +133,7 @@ export default function Practice() {
           {/* Running Timer */}
           {flowState === STATES.RECORDING && (
             <div className="text-2xl font-mono font-bold text-[#6A1B38] animate-pulse">
-              ⏱️ {timer.formatted}
+              RECORDING {timer.formatted}
             </div>
           )}
 

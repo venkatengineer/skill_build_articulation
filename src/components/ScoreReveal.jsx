@@ -58,7 +58,7 @@ export default function ScoreReveal({ clarity = 0, accuracy = 0, mistakes = [], 
       {feedback && (
         <div className="p-4 bg-[#FAF7F2] border-l-4 border-[#7C66DC] rounded-r-xl text-sm font-medium text-[#2D2A26] leading-relaxed">
           <span className="font-bold text-[#382E67] block mb-1">
-            💡 AI Articulation Guidance:
+            AI Articulation Guidance:
           </span>
           {feedback}
         </div>

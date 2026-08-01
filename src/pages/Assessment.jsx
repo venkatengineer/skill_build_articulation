@@ -114,7 +114,7 @@ export default function Assessment() {
           <Waveform analyserNode={analyserNode} isRecording={isRecording} />
           {flowState === STATES.RECORDING && (
             <div className="text-2xl font-mono font-bold text-[#6A1B38]">
-              ⏱️ {timer.formatted}
+              RECORDING {timer.formatted}
             </div>
           )}
           <div className="flex flex-col items-center justify-center gap-3">
